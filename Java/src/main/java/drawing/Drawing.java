@@ -53,3 +53,16 @@ public class Drawing {
     }
 }
 
+// It is not a good idea to re-write the same code for the two formats.
+/**
+ * We can have an interface for the writer, and then have two classes that implement the interface for the two formats.
+ * This way, we can avoid re-writing the same code for the two formats.
+ * Later when we want to add a new format, we can just create a new class that implements the interface.
+ */
+
+ /**
+  * Also the Drawing class is exposing the encapsulated details of the shape by calling the toLines() method.
+  * We can change this by adding a parameter to the toLines() method, which makes it take a writer,
+  * and modifies the writer object inside the method rather than exposing the details to Drawing.
+  */
+
